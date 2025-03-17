@@ -8,7 +8,7 @@
 - 
 
 ### SwiftUI
-[NavigationView](swiftui/NavigationView.md)
+[NavigationView](SwiftUI/NavigationView.md)
 
 ### Architecture
 
