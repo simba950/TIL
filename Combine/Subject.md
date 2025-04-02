@@ -32,3 +32,17 @@
 (위 로그 이미지를 보면 7로 전달한 값을 출력한다.)
 
 ## @Published vs CurrentValueSubject
+- 둘 다 상태를 저장하고, 새로운 값을 방출하는 기능을 하지만, 차이점이 있다.
+
+### @Published
+- @Published는 ObservableObject 프로토콜을 채택한 객체 내부 구현 프로퍼티 래퍼다.
+- SwiftUI에서 View와 데이터 바인딩하는데 주로 사용됨.
+- @Published 프로퍼티는 '$'키워드를 붙이면 Publisher 타입으로 변환된다.
+  ![@Published to Publisher](Published_to_publisher.png)
+
+### CurrentValueSubject
+- Combine 스트림 상태관리 시 사용한다.
+  
+### So What?
+- SwiftUI ViewModel(ObservableObject)에서 상태 관리를 할 경우에 @Published를 사용한다. @Published의 상태 변경에 따라 View가 업데이트 됨.
+- CurrentValueSubject의 경우 상태가 변경됨을 여러곳에서 값을 구독하여 관찰하고자 할 경우 사용한다.
