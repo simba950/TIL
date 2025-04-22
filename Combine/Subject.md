@@ -13,7 +13,7 @@
 
 ## PassthroughSubject
 
-![PassthrouSubject](PassthroughSubject.png)
+![PassthrouSubject](img/PassthroughSubject.png)
 
 - 다운스트림 Subscriber에게 element를 전달한다.
 - CurrentValueSubject와 달리, 초기값이나 버퍼를 가지지 않는다. 
@@ -22,8 +22,8 @@
 
 ## CurrentValueSubject
 
-![CurrentValueSubject](CurrentValueSubject.png)
-![CurrentValueSubject result](CurrentValueSubject_log.png)
+![CurrentValueSubject](img/CurrentValueSubject.png)
+![CurrentValueSubject result](img/CurrentValueSubject_log.png)
 
 
 - 하나의 값을 감싸고, 값이 변할때마다 publish 하는 서브젝트
@@ -38,7 +38,7 @@
 - @Published는 ObservableObject 프로토콜을 채택한 객체 내부 구현 프로퍼티 래퍼다.
 - SwiftUI에서 View와 데이터 바인딩하는데 주로 사용됨.
 - @Published 프로퍼티는 '$'키워드를 붙이면 Publisher 타입으로 변환된다.
-  ![@Published to Publisher](Published_to_publisher.png)
+  ![@Published to Publisher](img/Published_to_publisher.png)
 
 ### CurrentValueSubject
 - Combine 스트림 상태관리 시 사용한다.
