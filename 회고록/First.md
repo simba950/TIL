@@ -24,8 +24,9 @@
 - 두 프로퍼티 래퍼 모두 ObservableObject 프로토콜을 준수하는 객체의 변화(ex: @Published 프로퍼티)를 감지하고, 그에따라 View를 업데이트 하는데 사용된다.
 - 해당 내용을 찾아본 결과, 값이 변경되면 ObservableObject 프로토콜 내 objectWillChange publisher의 send()라는 메서드를 자동으로 호출하여 데이터가 변경되었음을 알릴 수 있다고 한다.
 -  하지만, 두 프로퍼티 래퍼는 차이점이 존재한다.
-- 먼저, @ObservedObject의 경우 프로퍼티의 변화가 생길 경우, 뷰를 다시 생성해서 그린다. ViewModel을 @ObservedObject로 선언할 경우, 뷰를 다시 그리며 ViewModel 인스턴스를 초기화 한다.
-- 반변에, @StateObject의 경우 프로퍼티 변화가 생길 경우, 뷰를 다시 생성해서 그리진 않는다.
+- ~~먼저, @ObservedObject의 경우 프로퍼티의 변화가 생길 경우, 뷰를 다시 생성해서 그린다. ViewModel을 @ObservedObject로 선언할 경우, 뷰를 다시 그리며 ViewModel 인스턴스를 초기화 한다.~~
+- ~~반변에, @StateObject의 경우 프로퍼티 변화가 생길 경우, 뷰를 다시 생성해서 그리진 않는다.~~
+- 
 - 보통, @StateObject를 사용하며, 하위 뷰에 프로퍼티를 전달해서 사용할 경우, 의존성을 줄이기 위해 하위뷰에는 @ObservedObject로 프로퍼티를 만들어 상위 뷰에서 전달해 사용한다.
 
 
